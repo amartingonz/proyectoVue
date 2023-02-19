@@ -1,56 +1,51 @@
 <script setup>
-import {onAuthStateChanged} from "firebase/auth";
-import {auth} from "@/firebase";
-import {ref} from "vue";
+
 import { useFirestore,useCollection } from 'vuefire'
 import { collection } from 'firebase/firestore'
 import { addDoc , deleteDoc} from 'firebase/firestore'
 const db = useFirestore();
 
 function crearCurso(){
-    console.log('hola');
   const docRef = addDoc(collection(db,"cursos"),{
-  nombre: nombre.value,
-  duracion : duracion.value
+  nombre: document.getElementById("nombre").value,
+  duracion : document.getElementById("duracion").value,
+  categoria : document.getElementById("categoria").value,
+  imagen : document.getElementById("imagen").value
 });
 }
 const cursos = useCollection(collection(db,'cursos'));
 
-let nombreUsuario = ref("");
-
-onAuthStateChanged(auth, (user) => {
-  if (user) {
-    // User is signed in, see docs for a list of available properties
-    // https://firebase.google.com/docs/reference/js/firebase.User
-    const uid = user.uid;
-    nombreUsuario.value = user.email;
-  }
-});
-
-function cerrarSesion() {
-  auth.signOut().then(() => {
-    // Sign-out successful.
-    
-  }).catch((error) => {
-    // An error happened.
-  });
-}
 </script>
 <template>
     <div class="greetings">
         <h1>Área Privada</h1>
-        <p>Bienvenido {{ nombreUsuario }}</p>
-        <button @click="cerrarSesion">Cerrar Sesion</button>
+          <p>Bienvenido {{ nombreUsuario }}</p>
         <h2>Crear Curso</h2>
+        <br>
+        <label for="categoria">Categoria del Curso</label>
+        <br>
+        <input type="text" v-model="categoria" id="categoria">
+        <br>
         <label for="nombre">Nombre del Curso</label>
         <br>
-        <input type="text" v-model="nombre">
+        <input type="text" v-model="nombre" id="nombre">
         <br>
         <label for="duracion">Duración del Curso</label>
         <br>
-        <input type="text" v-model="duracion">
+        <input type="text" v-model="duracion" id="duracion">
+        <br>
+        <br>
+        <label for="imagen">Imagen</label>
+        <br>
+        <input type="file" id="categoria">
         <br>
         <button @click="crearCurso()">Crear Curso</button>
+        <ul v-for="curso in cursos" :key="curso.id">
+            <li>{{ curso.nombre }}</li>
+            <li>{{ curso.duracion }}</li>
+            <li>{{ curso.categoria }}</li>
+            <li>{{ curso.imagen }}</li>
+        </ul>
     </div>
 
 

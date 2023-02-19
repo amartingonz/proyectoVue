@@ -1,6 +1,5 @@
 import {createApp} from 'vue'
 import App from './App.vue'
-
 import './assets/main.css'
 import inicio from "@/components/inicio.vue";
 // import TheWelcome from "@/components/TheWelcome.vue";
@@ -72,6 +71,7 @@ onAuthStateChanged(auth, (user) => {
         // https://firebase.google.com/docs/reference/js/firebase.User
         const uid = user.uid;
         authState = true;
+        router.push('/administracion')
     } else {
         // User is signed out
         authState = false;

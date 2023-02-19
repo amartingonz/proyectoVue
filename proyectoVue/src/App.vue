@@ -1,22 +1,44 @@
 <script setup>
 // import HelloWorld from './components/HelloWorld.vue'
 // import TheWelcome from './components/TheWelcome.vue'
-
+import {auth} from "@/firebase";
+import {onAuthStateChanged} from "firebase/auth";
+import {ref} from "vue";
 import { RouterLink, RouterView} from 'vue-router'
-
+let nombreUsuario = ref("");
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    // User is signed in, see docs for a list of available properties
+    // https://firebase.google.com/docs/reference/js/firebase.User
+    const uid = user.uid;
+    nombreUsuario.value = user.email;
+  }
+});
+function cerrarSesion() {
+  auth.signOut().then(() => {
+    // Sign-out successful.
+    nombreUsuario.value = "";
+    router.push('/inicio');
+  }).catch((error) => {
+    // An error happened.
+  });
+}
 </script>
 
 <template>
   <header>
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
     <nav>
+      {{ nombreUsuario }} |
       <router-link to="/">Inicio</router-link> |
       <router-link to="/ofimatica">Ofimatica</router-link> |
       <router-link to="/programacion">Programación</router-link> |
       <router-link to="/sistemas">Sistemas Operativos</router-link> |
-      <router-link to="/registro">Registro</router-link> |
-      <router-link to="/login">Login</router-link> |
-      <router-link to="/administracion">Administración</router-link> |
+      <router-link to="/registro" v-if="nombreUsuario == ''">Registro</router-link> |
+      <router-link to="/login" v-if="nombreUsuario == ''" >Login</router-link> |
+      <router-link to="/administracion" v-if="nombreUsuario != ''">Administración</router-link> |
+      <button v-if="nombreUsuario != ''"  @click="cerrarSesion">Cerrar Sesion</button>
+
 
       <!-- <router-link to="/registro">Registro</router-link> | -->
 
@@ -28,6 +50,13 @@ import { RouterLink, RouterView} from 'vue-router'
     <router-view></router-view>
 
   </main>
+  <br>
+  <v-footer>
+    <p>Alejandro Martín González</p>
+    <a href="#">Politica de Privacidad</a>
+    <br>
+    <a href="#">649019746</a>
+  </v-footer>
 </template>
 
 <style scoped>
