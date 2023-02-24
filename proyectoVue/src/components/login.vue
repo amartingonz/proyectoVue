@@ -6,6 +6,8 @@
     import { auth } from "../firebase.js";
 
     let usuario=ref(""), password=ref("")
+    
+    // Función para login mediante Correo
 
     function logindeUsuario(){
 
@@ -21,6 +23,7 @@
         });
     }
 
+    // Función para login con Google
     function logindeGoogle(){
 
         signInWithPopup(auth, new GoogleAuthProvider())

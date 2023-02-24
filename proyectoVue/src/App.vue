@@ -1,6 +1,4 @@
 <script setup>
-// import HelloWorld from './components/HelloWorld.vue'
-// import TheWelcome from './components/TheWelcome.vue'
 import {auth} from "@/firebase";
 import {onAuthStateChanged} from "firebase/auth";
 import {ref} from "vue";
@@ -38,11 +36,6 @@ function cerrarSesion() {
       <router-link to="/login" v-if="nombreUsuario == ''" >Login</router-link> |
       <router-link to="/administracion" v-if="nombreUsuario != ''">Administración</router-link> |
       <button v-if="nombreUsuario != ''"  @click="cerrarSesion">Cerrar Sesion</button>
-
-
-      <!-- <router-link to="/registro">Registro</router-link> | -->
-
-      <!-- <router-link to="/privado">Privado</router-link> | -->
     </nav>
   </header>
 

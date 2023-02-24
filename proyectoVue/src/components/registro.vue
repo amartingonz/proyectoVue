@@ -6,6 +6,7 @@ import { createUserWithEmailAndPassword} from "@firebase/auth";
 
 
     var usuario = ref(""), contrasena = ref("");
+    // Función para registrar un usuario en la base de datos.
     function altaUsuario(){
             createUserWithEmailAndPassword(auth, usuario.value, contrasena.value)
     .then((userCredential) => {

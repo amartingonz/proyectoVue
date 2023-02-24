@@ -14,6 +14,7 @@ import {auth} from "@/firebase";
 
 
 var authState = false;
+// Rutas de los componentes
 const routes = [
     {
         path: '/',
@@ -53,6 +54,8 @@ const router = createRouter({
     history: createWebHistory(),
     routes
 })
+
+// Si el usuario esta logueado hace un router.push hacia la sección de administración, y al loguear te manda al /.
 onAuthStateChanged(auth, (user) => {
     if (user) {
         // User is signed in, see docs for a list of available properties
