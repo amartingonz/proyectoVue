@@ -85,22 +85,20 @@ const cursos = useCollection(collection(db,'cursos'));
     <input type="text" v-model="duracion" id="duracion">
     <br>
     <br>
-    <label for="imagen">Imagen</label>
-    <br>
+    <label for="imagen">Imagen </label>
     <input type="file" id="imagen">
     <br>
     <button @click="crearCurso()">Crear Curso</button>
-    <ul v-for="curso in cursos" :key="curso.id">
-      <li>Nuevo Curso</li>
-      <li>-----------------------------------------------------</li>
-      <li>{{ curso.nombre }}</li>
-      <li>{{ curso.duracion }}</li>
-      <li>{{ curso.categoria }}</li>
+    <hr>
+    <ul v-for="curso in cursos" :key="curso.id" style="list-style: none;" class="listas">
+      <li>Nuevo Curso:</li>
+      <li> Nombre: {{ curso.nombre }}</li>
+      <li>Duración: {{ curso.duracion }}</li>
+      <li>Categoria: {{ curso.categoria }}</li>
       <li><img src="../assets/img/defecto.png" alt="imagen del curso"></li>
       <li><button @click="borrarCurso(curso.id)">Borrar Curso</button></li>
       <li><button @click="editarCurso(curso.id)">Editar Curso</button></li>
 
-      <li>-----------------------------------------------------</li>
     </ul>
   </div>
 </template>
@@ -109,8 +107,14 @@ h1 {
   font-weight: 500;
   font-size: 2.6rem;
   top: -10px;
+  margin: 1rem;
 }
-
+.listas li{
+  display: inline-block;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.5rem;
+}
 h3 {
   font-size: 1.2rem;
 }

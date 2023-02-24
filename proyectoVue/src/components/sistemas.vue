@@ -10,21 +10,24 @@
                 <li>Duración: 20h</li>
                 <li><img src="../assets/img/sistemas/android.png" alt="" srcset=""></li>
                 <li><button>Inscribirse</button></li>
-                <li><a href="http://localhost:5173/src/assets/pdf/sistemas/Android.pdf" target="_blank" rel="noopener">Obtener Información</a></li>
+                <!-- <li><a href="http://localhost:5173/src/assets/pdf/sistemas/Android.pdf" target="_blank" rel="noopener">Obtener Información</a></li> -->
+                <li><a href="https://proyectovue-ca4b7.web.app/pdf/sistemas/Android.pdf" target="_blank">Obtener Información</a></li>
             </ul>
             <ul>
                 <li>Nombre: Curso de Linux</li>
                 <li>Duración: 17h</li>
                 <li><img src="../assets/img/sistemas/linux.png" alt="" srcset=""></li>
                 <li><button>Inscribirse</button></li>
-                <li><a href="http://localhost:5173/src/assets/pdf/sistemas/Linux.pdf" target="_blank" rel="noopener">Obtener Información</a></li>
+                <!-- <li><a href="http://localhost:5173/src/assets/pdf/sistemas/Linux.pdf" target="_blank" rel="noopener">Obtener Información</a></li> -->
+                <li><a href="https://proyectovue-ca4b7.web.app/pdf/sistemas/Linux.pdf" target="_blank">Obtener Información</a></li>
             </ul>
             <ul>
                 <li>Nombre: Curso de Windows</li>
                 <li>Duración: 16h</li>
                 <li><img src="../assets/img/sistemas/w11.png" alt="" srcset=""></li>
                 <li><button>Inscribirse</button></li>
-                <li><a href="http://localhost:5173/src/assets/pdf/sistemas/Windows.pdf" target="_blank" rel="noopener" >Obtener Información</a></li>
+                <!-- <li><a href="http://localhost:5173/src/assets/pdf/sistemas/Windows.pdf" target="_blank" rel="noopener" >Obtener Información</a></li> -->
+                <li><a href="https://proyectovue-ca4b7.web.app/pdf/sistemas/Windows.pdf" target="_blank">Obtener Información</a></li>
             </ul>
         </div>
   </div>

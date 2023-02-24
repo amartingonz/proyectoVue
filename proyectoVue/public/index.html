@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./src/jquery-3.6.3.min.js"></script>
+    
+    <title>Vite App</title>
+    <script type="module" crossorigin src="/assets/index-4cdc1758.js"></script>
+    <link rel="stylesheet" href="/assets/index-fe5e4aaa.css">
+  </head>
+  <body>
+    <!-- DIV PARA EL PRELOAD -->
+    <div id="preload">
+      <div class="spinner"></div>
+    </div>
+    <div id="app"></div>
+    
+
+    <!-- SCRIPT PARA EL PRELOAD QUE SE EJECUTA AL RECARGAR LA PAGINA -->
+    <script>
+      window.onload = function() {
+        var preload = document.getElementById("preload");
+        preload.style.display = "none";
+      }
+    </script>
+  </body>
+</html>

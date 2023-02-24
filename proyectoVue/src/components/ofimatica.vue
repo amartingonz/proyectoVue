@@ -10,21 +10,26 @@
                 <li>Duración: 20h</li>
                 <li><img src="../assets/img/ofimatica/access.png" alt="" srcset=""></li>
                 <li><button>Inscribirse</button></li>
-                <li><a href="http://localhost:5173/src/assets/pdf/ofimatica/Access.pdf" target="_blank">Obtener Información</a></li>
+                <!-- <li><a href="http://localhost:5173/src/assets/pdf/ofimatica/Access.pdf" target="_blank">Obtener Información</a></li> -->
+                <li><a href="https://proyectovue-ca4b7.web.app/pdf/ofimatica/Access.pdf" target="_blank">Obtener Información</a></li>
+
             </ul>
             <ul>
                 <li>Nombre: Curso de Word</li>
                 <li>Duración: 17h</li>
                 <li><img src="../assets/img/ofimatica/word.png" alt="" srcset=""></li>
                 <li><button>Inscribirse</button></li>
-                <li><a href="http://localhost:5173/src/assets/pdf/ofimatica/Word.pdf" target="_blank">Obtener Información</a></li>
+                <!-- <li><a href="http://localhost:5173/src/assets/pdf/ofimatica/Word.pdf" target="_blank">Obtener Información</a></li> -->
+                <li><a href="https://proyectovue-ca4b7.web.app/pdf/ofimatica/Word.pdf" target="_blank">Obtener Información</a></li>
             </ul>
             <ul>
                 <li>Nombre: Curso de Excel</li>
                 <li>Duración: 16h</li>
                 <li><img src="../assets/img/ofimatica/excel.png" alt="" srcset=""></li>
                 <li><button>Inscribirse</button></li>
-                <li><a href="http://localhost:5173/src/assets/pdf/ofimatica/Excel.pdf" target="_blank">Obtener Información</a></li>
+                <!-- <li><a href="http://localhost:5173/src/assets/pdf/ofimatica/Excel.pdf" target="_blank">Obtener Información</a></li> -->
+                <li><a href="https://proyectovue-ca4b7.web.app/pdf/ofimatica/Excel.pdf" target="_blank">Obtener Información</a></li>
+
             </ul>
         </div>
     </div>

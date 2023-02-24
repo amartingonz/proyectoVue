@@ -2,9 +2,7 @@ import {createApp} from 'vue'
 import App from './App.vue'
 import './assets/main.css'
 import inicio from "@/components/inicio.vue";
-// import TheWelcome from "@/components/TheWelcome.vue";
 import registro from "@/components/registro.vue";
-// import privado from "@/components/privado.vue";
 import ofimatica from './components/ofimatica.vue'
 import programacion from './components/programacion.vue'
 import sistemas from './components/sistemas.vue'
@@ -32,9 +30,7 @@ const routes = [
     {
         path: '/sistemas',
         component: sistemas,
-        beforeEnter: (to, from) => {
-            // reject the navigation
-            return authState},
+       
     },
     {
         path: '/registro',

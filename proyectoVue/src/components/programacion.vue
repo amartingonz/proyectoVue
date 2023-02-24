@@ -10,21 +10,24 @@
                 <li>Duración: 20h</li>
                 <li><img src="../assets/img/programacion/python.png" alt="" srcset=""></li>
                 <li><button>Inscribirse</button></li>
-                <li><a href="http://localhost:5173/src/assets/pdf/programacion/Python.pdf" target="_blank">Obtener Información</a></li>
+                <!-- <li><a href="http://localhost:5173/src/assets/pdf/programacion/Python.pdf" target="_blank">Obtener Información</a></li> -->
+                <li><a href="https://proyectovue-ca4b7.web.app/pdf/programacion/Python.pdf" target="_blank">Obtener Información</a></li>
             </ul>
             <ul>
                 <li>Nombre: Curso de Java </li>
                 <li>Duración: 17h</li>
                 <li><img src="../assets/img/programacion/java.png" alt="" srcset=""></li>
                 <li><button>Inscribirse</button></li>
-                <li><a href="http://localhost:5173/src/assets/pdf/programacion/Java.pdf" target="_blank">Obtener Información</a></li>
+                <!-- <li><a href="http://localhost:5173/src/assets/pdf/programacion/Java.pdf" target="_blank">Obtener Información</a></li> -->
+                <li><a href="https://proyectovue-ca4b7.web.app/pdf/programacion/Java.pdf" target="_blank">Obtener Información</a></li>
             </ul>
             <ul>
                 <li>Nombre: Curso de JavaScript</li>
                 <li>Duración: 16h</li>
                 <li><img src="../assets/img/programacion/js.png" alt="" srcset=""></li>
                 <li><button>Inscribirse</button></li>
-                <li><a href="http://localhost:5173/src/assets/pdf/programacion/JavaScript.pdf" target="_blank">Obtener Información</a></li>
+                <!-- <li><a href="http://localhost:5173/src/assets/pdf/programacion/JavaScript.pdf" target="_blank">Obtener Información</a></li> -->
+                <li><a href="https://proyectovue-ca4b7.web.app/pdf/programacion/JavaScript.pdf" target="_blank">Obtener Información</a></li>
             </ul>
         </div>
   </div>
