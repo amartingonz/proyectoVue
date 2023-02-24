@@ -5,6 +5,7 @@ import {auth} from "@/firebase";
 import {onAuthStateChanged} from "firebase/auth";
 import {ref} from "vue";
 import { RouterLink, RouterView} from 'vue-router'
+import preload from "./components/preload.vue";
 let nombreUsuario = ref("");
 onAuthStateChanged(auth, (user) => {
   if (user) {

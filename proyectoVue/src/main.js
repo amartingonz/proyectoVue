@@ -51,15 +51,7 @@ const routes = [
         
     },
 ]
-//     {
-//         path: '/privado',
-//         component: privado,
-        // beforeEnter: (to, from) => {
-        //     // reject the navigation
-        //     return authState
-//         },
-//     },
-// ]
+
 
 const router = createRouter({
     history: createWebHistory(),

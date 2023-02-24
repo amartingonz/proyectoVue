@@ -5,10 +5,23 @@
     <link rel="icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./src/jquery-3.6.3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./src/assets/preload.css">
     <title>Vite App</title>
   </head>
   <body>
+    <!-- DIV PARA EL PRELOAD -->
+    <div id="preload">
+      <div class="spinner"></div>
+    </div>
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
+
+    <!-- SCRIPT PARA EL PRELOAD QUE SE EJECUTA AL RECARGAR LA PAGINA -->
+    <script>
+      window.onload = function() {
+        var preload = document.getElementById("preload");
+        preload.style.display = "none";
+      }
+    </script>
   </body>
 </html>

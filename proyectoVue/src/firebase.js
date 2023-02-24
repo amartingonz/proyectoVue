@@ -2,7 +2,6 @@ import { initializeApp } from 'firebase/app'
 import { getFirestore,collection } from 'firebase/firestore'
 import { getAuth } from 'firebase/auth';
 
-
 export const firebaseApp = initializeApp({
     apiKey: "AIzaSyDZaSbXcSW_jHkXuP0KN-8gn_4YayPB6pE",
     authDomain: "proyectovue-ca4b7.firebaseapp.com",
