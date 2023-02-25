@@ -1,4 +1,5 @@
 <script setup>
+// Aqui importo lo necesario para darle funcionalidad
 import {auth} from "@/firebase";
 import {onAuthStateChanged} from "firebase/auth";
 import {ref} from "vue";

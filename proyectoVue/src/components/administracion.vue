@@ -1,4 +1,5 @@
 <script setup>
+// Aqui importo lo necesario para darle funcionalidad
 import { getStorage, ref, uploadBytes } from 'firebase/storage';
 import { useFirestore, useCollection } from 'vuefire'
 import { collection,doc } from 'firebase/firestore'
@@ -6,8 +7,11 @@ import { addDoc, deleteDoc , updateDoc  } from 'firebase/firestore'
 import ofimatica from './ofimatica.vue';
 import programacion from './programacion.vue';
 import sistemas from './sistemas.vue';
+// Var storage para el almacenamiento de imagenes.
 var storage = getStorage();
+// Const db para el uso de la base de datos
 const db = useFirestore();
+//Funcion crear cursos para subir los datos a la base de datos y la imagen al storage
 function crearCurso(){
   // Obtener el archivo seleccionado
   const imagen = document.getElementById("imagen").files[0];
@@ -20,7 +24,7 @@ function crearCurso(){
       nombre: document.getElementById("nombre").value,
       duracion : document.getElementById("duracion").value,
       categoria : document.getElementById("categoria").value,
-      imagen : document.getElementById("categoria").src
+      imagen : document.getElementById("imagen").src
       });
   }).catch((error) => {
     console.error('Error al cargar el archivo', error);
@@ -45,7 +49,7 @@ function editarCurso(id) {
     nombre: document.getElementById("nombre").value,
     duracion : document.getElementById("duracion").value,
     categoria : document.getElementById("categoria").value,
-    imagen : document.getElementById("categoria").src
+    imagen : document.getElementById("imagen").src
   })
     .then(() => {
       console.log('Curso actualizado correctamente');
@@ -70,6 +74,7 @@ const cursos = useCollection(collection(db,'cursos'));
   <div class="greetings">
     <h1>Área Privada</h1>
     <p>Bienvenido {{ nombreUsuario }}</p>
+    <!-- FORMULARIO PARA REGISTRAR , EDITAR UN CURSO -->
     <h2>Crear Curso</h2>
     <br>
     <label for="categoria">Categoria del Curso</label>
@@ -90,6 +95,7 @@ const cursos = useCollection(collection(db,'cursos'));
     <br>
     <button @click="crearCurso()">Crear Curso</button>
     <hr>
+    <!-- LISTA DE CURSOS -->
     <ul v-for="curso in cursos" :key="curso.id" style="list-style: none;" class="listas">
       <li>Nuevo Curso:</li>
       <li> Nombre: {{ curso.nombre }}</li>

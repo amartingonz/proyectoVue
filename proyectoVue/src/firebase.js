@@ -1,3 +1,4 @@
+// Aqui importo lo necesario para darle funcionalidad
 import { initializeApp } from 'firebase/app'
 import { getFirestore,collection } from 'firebase/firestore'
 import { getAuth } from 'firebase/auth';

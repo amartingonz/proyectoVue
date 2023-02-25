@@ -1,8 +1,8 @@
 <script setup>
+// Aqui importo lo necesario para darle funcionalidad
 import { ref } from "vue";
 import { auth } from "../firebase.js";
 import { createUserWithEmailAndPassword} from "@firebase/auth";
-// import { createUserWithEmailAndPassword, signInWithEmailAndPassword , signInWithPopup , GoogleAuthProvider } from "@firebase/auth";
 
 
     var usuario = ref(""), contrasena = ref("");
